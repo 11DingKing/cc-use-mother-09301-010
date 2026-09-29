@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "product": "高校分类数据收件箱",
+  "source_context": "http://edu.people.com.cn/n1/2026/0924/c1006-40804945.html",
+  "actors": [
+    "高校填报员",
+    "数据审核员",
+    "评价管理人员"
+  ],
+  "states": [
+    "接收",
+    "校验",
+    "修订",
+    "发布",
+    "撤回"
+  ],
+  "invariants": [
+    "隔离收件箱",
+    "逐行校验",
+    "原子发布",
+    "文件指纹"
+  ],
+  "sample_cases": [
+    {
+      "case_id": "09301-010-A",
+      "actor": "高校填报员",
+      "state": "接收"
+    },
+    {
+      "case_id": "09301-010-B",
+      "actor": "评价管理人员",
+      "state": "校验"
+    }
+  ],
+  "tags": [
+    "data-inbox",
+    "atomic-publication"
+  ]
+}
